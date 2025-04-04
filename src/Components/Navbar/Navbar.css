@@ -1,0 +1,138 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 170px;
+}
+
+/* Logo Styling */
+.navbar h1 {
+  font-size: 60px;
+  font-weight: bold;
+  color: #0a26d8;
+  background: linear-gradient(90deg, #0a26d8, #23a8e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: "Arial", sans-serif;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.navbar h1:hover {
+  transform: scale(1.3);
+}
+
+/* Desktop Nav Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 25px;
+  transition: 0.5s;
+}
+
+.nav-menu li {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-menu li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0a26d8, #23a8e1);
+  bottom: 0;
+  left: 0;
+  transition: width 0.5s ease-in-out;
+}
+
+.nav-menu li:hover {
+  transform: scale(1.2);
+}
+
+.nav-menu li:hover::after {
+  width: 100%;
+}
+
+.nav-connect {
+  padding: 15px 30px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #0a26d8 0.36%, #23a8e1 102.06%);
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+
+.nav-connect:active {
+  background: linear-gradient(267deg, #23a8e1 0.36%, #0a26d8 102.06%);
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: white;
+}
+
+/* Mobile Styling */
+.nav-mob-open {
+  display: none;
+  width: 40px;
+  cursor: pointer;
+}
+
+.nav-mob-close {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    margin: 20px;
+  }
+
+  .nav-connect {
+    display: none;
+  }
+
+  .nav-mob-open {
+    display: block;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #23a8e1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 22px;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .nav-menu.open {
+    right: 0;
+  }
+
+  .nav-mob-close {
+    display: block;
+  }
+}
