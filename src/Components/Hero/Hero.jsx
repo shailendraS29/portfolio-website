@@ -11,7 +11,16 @@ function Hero() {
 <p>I'm a creative and detail-oriented developer with a passion for building clean, responsive websites. I love solving real-world problems and always aim to deliver smooth user experiences through modern design and code.</p>
       <div className = "hero-action">
         <div className="hero-connect"> <AnchorLink className="anchor-link" offset={50} href='#contact'>Connect with me </AnchorLink></div>
-        <div className ="hero-resume">My resume</div>
+        <div className ="hero-resume">
+        <a
+            href="/Shailendra_S29_Resume.pdf"
+            target='_blank'
+            rel="noopener noreferrer"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+          My resume
+          </a>
+          </div>
       </div>
     </div>
   )
